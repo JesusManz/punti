@@ -39,7 +39,7 @@ export default async function handler(req, res) {
         {
           shipping_rate_data: {
             type: 'fixed_amount',
-            fixed_amount: { amount: 500, currency: 'eur' }, // 5 €
+            fixed_amount: { amount: 100, currency: 'eur' }, // 5 €
             display_name: 'Envío estándar (3-5 días)',
             delivery_estimate: {
               minimum: { unit: 'business_day', value: 3 },
@@ -51,7 +51,7 @@ export default async function handler(req, res) {
 
       line_items,
       success_url: `${req.headers.origin}/success.html`,
-      cancel_url: `${req.headers.origin}/cancel.html`,
+      cancel_url: `${req.headers.origin}/tienda.html`,
     });
 
     res.status(200).json({ url: session.url });
