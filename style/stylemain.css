@@ -1,0 +1,347 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+.main-container{
+    max-width: 100%;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.text-info {
+margin-left: 40px;
+color: blue;
+}
+.text-info h2{
+  font-size: 30px;
+}
+
+/* grid de 5 columnas x 2 filas */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* texto fijo en (1,1) */
+.text-block {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* imagen fija en (2,5) */
+.static-image {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.static-image img { max-width: 30%; height: auto; }
+
+/* tarjetas de producto */
+.product-card {
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+}
+.product-card img { 
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+}
+.product-card p{
+  margin: 0;
+  margin-top: 2px;
+}
+
+.product-card a { 
+  font-weight: 700;
+  text-decoration: none;
+  color: green;
+  display: block;
+  margin-top: 4px;
+}
+
+/* posiciones de los productos en desktop */
+.product-pos-1 { grid-column: 2; grid-row: 1; } /* fila1, col2 */
+.product-pos-2 { grid-column: 3; grid-row: 1; } /* fila1, col3 */
+.product-pos-3 { grid-column: 4; grid-row: 1; } /* fila1, col4 */
+.product-pos-4 { grid-column: 5; grid-row: 1; } /* fila1, col5  */
+
+.product-pos-5 { grid-column: 2; grid-row: 2; } /* fila2, col1 */
+.product-pos-6 { grid-column: 3; grid-row: 2; } /* fila2, col2 */
+.product-pos-7 { grid-column: 4; grid-row: 2; } /* fila2, col3 */
+.product-pos-8 { grid-column: 5; grid-row: 2; } /* fila2, col4 */
+
+
+/* SECCIÓN 2 */
+.section2{
+  margin-top: 50px;
+}
+.grid-container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, auto);
+  gap: 5px;
+  max-width: 40%;
+  margin-left: 50px;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.info-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  background-color: none;
+  font-size: 70px;
+  color: blue;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.tooltip {
+  position: absolute;
+  left: 30px; /* a la derecha del "?" */
+  bottom: 110%; /* encima del "?" */
+  background-color: green;
+  color: white;
+  padding: 8px 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  white-space: normal;
+  max-width: 200px;
+  display: none; /* no se muestra si no haces click */
+}
+
+/* VIDEO - GIF */
+.gif {
+  max-width: 100%;
+  margin-top: 100px;
+}
+.gif img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* SECCIÓN 3 */
+.section3{
+  margin-top: 50px;
+}
+.text-info-minipunti h2{
+  margin-right: auto;
+  margin-left:900px;
+  font-size: 30px;
+  font-weight: 700;
+  color: blue;
+}
+.grid-container3 {
+  align-items: start;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 70px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.text-block-minipunti p{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.grid-minipunti {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.grid-minipunti:nth-child(2) h2{
+  display: none;
+}
+.minipunti-card{
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.minipunti-card img{
+width: 100%;
+}
+.minipunti-card p{
+    margin: 0;
+  margin-top: 2px;
+}
+.minipunti-card a{
+  color: green;
+  text-decoration: none;
+  margin-top: 40px;
+}
+
+/* SECCIÓN 4 ideas de uso*/
+.section4{
+  margin-top: 50px;
+}
+.grid-container4 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, auto);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.info-container4 img{
+  width: 100%;
+}
+
+/* SECCIÓN 5 señales de vida */
+.text-section5{
+  max-width: 40%;
+  margin-right: auto;
+  margin-left: 30px;
+}
+
+.text-section5 p{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 14px;
+    padding: 14px;
+    max-width: 100%;
+  }
+
+  /* texto arriba y ocupa ambas columnas */
+  .text-block {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  /* imagen al final, ocupa ambas columnas */
+  .static-image {
+    grid-column: 2 / 3;
+    grid-row: 5;
+  }
+
+  /* Anular reglas de posicionamiento de escritorio para dejar flow natural */
+  .product-pos-1,
+  .product-pos-2,
+  .product-pos-3,
+  .product-pos-4,
+  .product-pos-5,
+  .product-pos-6,
+  .product-pos-7,
+  .product-pos-8 {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+
+  .product-card { 
+    padding: 12px; 
+  }
+
+
+/* SECCIÓN 2 */
+
+.grid-container2 {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 50px;
+  margin-right: auto;
+  padding: 0;
+  max-width: 100%;
+}
+
+.tooltip {
+  position: absolute;
+  left: 20px;
+  bottom: 110%;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+  white-space: normal;
+  max-width: 200px;
+  display: none; 
+}
+
+
+/* SECCIÓN 3 */
+.section3{
+  margin-top: 50px;
+}
+
+.text-info-minipunti h2{
+   display: none;
+}
+.grid-container3 {
+  align-items: start;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid-minipunti {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.grid-minipunti:nth-child(2) h2{
+  display: block;
+}
+.minipunti-card img{
+width: 100%;
+}
+
+/* SECCIÓN 4 ideas de uso*/
+.section4{
+  margin-top: 50px;
+}
+.grid-container4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, auto);
+  gap: 20px;
+}
+.info-container4 img{
+  width: 100%;
+  margin: auto;
+}
+
+/* SECCIÓN 5 señales de vida */
+.text-section5{
+  max-width: 100%;
+}
+
+}

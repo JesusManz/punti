@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>( PUNTI ))</title>
+  <link rel="stylesheet" href="style/styleheader.css" />
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="header-left">( PUNTI )</a>
+  <div class="header-right">
+    <a href="tienda.html" class="button-header">( shop )</a>
+    <a href="about.html" class="button-header">( about )</a>
+    <button class="button-header" id="cartBtn">( cart )</button>
+  </div>
+</header>
+
+<!-- carrito -->
+<div class="cart-panel" id="cartPanel">
+  <h2>Tu Carrito</h2>
+  <p>Aquí van los productos</p>
+  <button id="closeCart">Cerrar</button>
+</div>
+
+<script>
+  // boton carrito del header manejado con js
+  const cartBtn = document.getElementById('cartBtn');
+  const cartPanel = document.getElementById('cartPanel');
+  const closeCart = document.getElementById('closeCart');
+
+  cartBtn.addEventListener('click', () => {
+    cartPanel.classList.add('open');
+  });
+
+  closeCart.addEventListener('click', () => {
+    cartPanel.classList.remove('open');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (!cartPanel.contains(e.target) && !cartBtn.contains(e.target)) {
+      cartPanel.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>

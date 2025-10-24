@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background: white
+  color: #333;
+}
+
+
+.producto-container {
+  display: flex;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 200px;
+  gap: 20px;
+}
+
+/* --- Galería horizontal --- */
+.galeria {
+  flex: 0 0 70%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 30px;
+  height: 300px; /* altura fija en desktop */
+  padding: 10px 0;
+
+}
+.galeria::-webkit-scrollbar {
+  height: 5px; /* grosor barra horizontal */
+}
+
+.galeria::-webkit-scrollbar-track {
+  background: white
+  border-radius: 0; /* terminación en recto */
+}
+
+.galeria::-webkit-scrollbar-thumb {
+  background-color:blue;
+  border-radius: 0; /* terminación en recto */
+}
+
+.galeria::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3;
+}
+
+.galeria img {
+  height: 100%;      /* usa toda la altura de la galería */
+  width: auto;       /* mantiene ratio */
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.info h1 {
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.info p{
+  font-size: 15px;
+  font-weight: 600;
+}
+#descripcion {
+  white-space: pre-wrap;
+}
+
+.precio {
+  font-size: 15px;
+  font-weight: 600;
+  color: green;
+}
+
+#btn-carrito {
+  text-align: left;
+  background-color:#ececec;
+  padding: 10px;
+  width: 100%;
+  display: block;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 700;
+}
+#btn-carrito:hover {
+  background-color: blue;
+  color: white;
+}
+
+.text-info {
+margin-left: 40px;
+color: blue;
+}
+.text-info h2{
+  font-size: 30px;
+}
+
+.main-container-producto{
+  margin-top: 100px;
+}
+
+
+@media (max-width: 768px) {
+  .producto-container {
+    flex-direction: column;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .galeria {
+    order: 1;
+    flex: none;
+    max-width: 90%;
+    height: 300px;
+    gap: 10px;
+    margin-left: auto;  /* para no pegarlo al borde izquierdo */
+    box-sizing: border-box;
+  }
+
+  .info {
+    order: 2;
+    flex: none;
+    max-width: 90%;
+    box-shadow: none;
+  }
+  #btn-carrito {
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+
+}
+}

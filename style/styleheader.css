@@ -1,0 +1,190 @@
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* texto izquierdo (PUNTI) */
+.header-left {
+  margin-left: 50px;
+  font-size: 100px;
+  font-weight: 600;
+  color: blue;
+  text-decoration: none; /* elimina subrayado */
+}
+
+/* items de la derecha */
+.header-right {
+  margin-right: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+/* botones y enlaces del header */
+.button-header {
+  cursor: pointer;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  font-weight: 600;
+  color: blue;
+  text-decoration: none;
+}
+
+.button-header:hover,
+.header-left:hover {
+  text-decoration: none;
+}
+
+/* carrito panel deslizante */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -3000px;
+  width: 300px;
+  height: 100%;
+  background-color: blue;
+  color: white;
+  box-shadow: -4px 0 10px blue;
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+/* encabezado del carrito */
+.cart-panel h2 {
+  font-family: Helvetica, sans-serif;
+  margin: 0 0 20px;
+  font-size: 60px;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+/* texto general */
+.cart-panel p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* contenedor de items */
+.cart-item {
+  background: none;
+  border-bottom: 1px dashed white;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* información del producto */
+.cart-item span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* botones de control (+ - y eliminar) */
+.cart-item button {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  border-radius: 0px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.cart-item button:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* importe total y mensaje de envío */
+.cart-panel .total {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.cart-panel .shipping {
+  color: rgba(255,255,255,0.8);
+}
+
+/* botón cerrar */
+#closeCart {
+  background: #fff;
+  color: #001F8D;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+#closeCart:hover {
+  background: #e0e0e0;
+}
+
+/* botón de checkout */
+#checkoutBtn {
+  margin-top: auto;
+  background: green;
+  border: none;
+  border-radius: 0px;
+  width: 100%;
+  padding: 14px 80px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#checkoutBtn:hover {
+  background: white;
+  color: blue;
+  transform: translateY(-1px);
+}
+
+
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .header-left {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .header-right {
+    justify-content: center;
+    gap: 1px;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIENDA | ( PUNTI )</title>
+  <link rel="stylesheet" href="style/styletienda.css">
+  <link rel="stylesheet" href="style/styleheader.css">
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+<div id="header-container"></div>
+<div class="main-container">
+   <div class="text-info"><h2>( ❊ ) ( LA TIENDA )</h2></div>
+<div class="grid-container" id="product-grid">
+  <!-- los productos se cargan aquí -->
+</div>
+</div>
+
+<!-- script externo para cargar los productos -->
+<script src="getproducts.js"></script>
+<script>
+  // en la tienda muestro todos los productos
+  cargarProductos('producto.json');
+</script>
+  <script type="module">
+    import { loadHeader } from './header.js';
+    loadHeader(); // incluye header
+  </script>
+
+</body>
+</html>
