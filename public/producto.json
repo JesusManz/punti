@@ -3,7 +3,7 @@
   "id": "12345",
   "titulo": "pera",
   "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
-  "precio": 12,
+  "precio": 1,
   "enlaceCompra": "https://tu-tienda.com/producto/12",
   "imagenes": [
     "assets/11.jpg",  
@@ -16,7 +16,7 @@
       "id": "1234",
   "titulo": "manzanass",
   "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
-  "precio": 12,
+  "precio": 1,
   "enlaceCompra": "https://tu-tienda.com/producto/12345",
   "imagenes": [
     "assets/12.jpg",
