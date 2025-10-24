@@ -1,24 +1,25 @@
 {
-  "name": "mi-tienda",
+  "name": "punti",
   "version": "1.0.0",
   "type": "module",
+  "description": "Tienda online desplegada en Vercel con Stripe Checkout",
+  "main": "api/create-checkout-session.js",
+  "scripts": {
+    "start": "node api/create-checkout-session.js",
+    "dev": "vercel dev"
+  },
   "dependencies": {
     "stripe": "^16.12.0"
-  },
-  "description": "",
-  "main": "getproducts-adapted.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JesusManz/punti.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["stripe", "checkout", "vercel", "tienda", "javascript"],
+  "author": "JesusManz",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JesusManz/punti/issues"
   },
-  "homepage": "https://github.com/JesusManz/punti#readme"
+  "homepage": "https://punti.vercel.app"
 }
