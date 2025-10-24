@@ -26,23 +26,36 @@ export function loadHeader(containerId = 'header-container') {
       checkoutBtn.id = 'checkoutBtn';
       cartPanel.appendChild(checkoutBtn);
 
-      checkoutBtn.addEventListener('click', async () => {
-        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-        if (!cart.length) return alert('Carrito vacío');
+checkoutBtn.addEventListener('click', async () => {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
-        try {
-          const res = await fetch('/api/create-checkout-session', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ items: cart }),
-          });
-          const data = await res.json();
-          window.location = data.url; // redirige a Stripe
-        } catch (err) {
-          console.error(err);
-          alert('Error al iniciar checkout');
-        }
-      });
+  if (!cart.length) {
+    return alert('Carrito vacío');
+  }
+
+  console.log('Carrito enviado al backend:', cart);
+
+  try {
+    const res = await fetch('/api/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: cart }),
+    });
+
+    const data = await res.json();
+
+    if (data.url) {
+      window.location.href = data.url; // redirige a Stripe
+    } else {
+      console.error('Error desde backend:', data.error);
+      alert('Error al iniciar el checkout');
+    }
+  } catch (err) {
+    console.error('Error fetch checkout:', err);
+    alert('Error al iniciar el checkout');
+  }
+});
+
 
 function renderCart() {
   const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');

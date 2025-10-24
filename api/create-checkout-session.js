@@ -1,5 +1,6 @@
 import Stripe from 'stripe';
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY); 
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -9,15 +10,20 @@ export default async function handler(req, res) {
   try {
     const { items } = req.body;
 
+    if (!items || !items.length) {
+      return res.status(400).json({ error: 'Carrito vacío' });
+    }
+
+    // Construimos line_items para Stripe
     const line_items = items.map(item => ({
       price_data: {
         currency: 'eur',
         product_data: {
-          name: item.titulo,
+          name: item.titulo || 'Producto',
         },
-        unit_amount: item.precio * 100, // stripe usa centimos
+        unit_amount: Math.round(Number(item.precio) * 100), // centimos
       },
-      quantity: item.cantidad,
+      quantity: Number(item.cantidad) || 1,
     }));
 
     const session = await stripe.checkout.sessions.create({
@@ -28,9 +34,11 @@ export default async function handler(req, res) {
       cancel_url: `${req.headers.origin}/cancel.html`,
     });
 
+    console.log('Stripe session creada:', session.id);
+
     res.status(200).json({ url: session.url });
   } catch (err) {
-    console.error(err);
+    console.error('Error creando sesión Stripe:', err);
     res.status(500).json({ error: 'Error creando la sesión' });
   }
 }
