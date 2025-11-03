@@ -1,87 +1,94 @@
 [
   {
-  "id": "12345",
-  "titulo": "pera",
-  "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
-  "precio": 1,
-  "enlaceCompra": "https://tu-tienda.com/producto/12",
-  "imagenes": [
-    "assets/11.jpg",  
-    "assets/12.jpg",
-    "assets/13.jpg",
-    "assets/14.jpg"
-  ]
-},
-{
-      "id": "1234",
-  "titulo": "manzanass",
-  "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
-  "precio": 1,
-  "enlaceCompra": "https://tu-tienda.com/producto/12345",
-  "imagenes": [
-    "assets/12.jpg",
-    "1.png",
-    "1.png" 
-  ]
-},
-{
-      "id": "123",
-  "titulo": "perasss",
+  "id": "naranja",
+  "titulo": "naranja",
   "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
   "precio": 12,
-  "enlaceCompra": "https://tu-tienda.com/producto/12345",
+  "enlaceCompra": "https://punti-delta.vercel.app/producto.html?id=naranja",
   "imagenes": [
-    "assets/13.jpg",
-    "1.png",
-    "1.png" 
+    "assets/naranja1.jpg",  
+    "assets/naranja2.jpg",
+    "assets/naranja3.jpg",
+    "assets/naranja4.jpg",
+    "assets/naranja5.jpg",
+    "assets/naranja6.jpg"
   ]
 },
-{
-      "id": "1236",
-  "titulo": "manzanass",
+  {
+  "id": "musgo",
+  "titulo": "musgo",
   "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
   "precio": 12,
-  "enlaceCompra": "https://tu-tienda.com/producto/12345",
+  "enlaceCompra": "https://punti-delta.vercel.app/producto.html?id=musgo",
   "imagenes": [
-    "assets/14.jpg",
-    "1.png",
-    "1.png" 
+    "assets/musgo1.jpg",  
+    "assets/musgo2.jpg",
+    "assets/musgo3.jpg",
+    "assets/musgo4.jpg",
+    "assets/musgo5.jpg",
+    "assets/musgo6.jpg"
   ]
 },
-{
-      "id": "1237",
-  "titulo": "manzanass",
+  {
+  "id": "pomelo",
+  "titulo": "pomelo",
   "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
   "precio": 12,
-  "enlaceCompra": "https://tu-tienda.com/producto/12345",
+  "enlaceCompra": "https://punti-delta.vercel.app/producto.html?id=pomelo",
   "imagenes": [
-    "assets/14.jpg",
-    "1.png",
-    "1.png" 
+    "assets/pomelo1.jpg",  
+    "assets/pomelo2.jpg", 
+    "assets/pomelo3.jpg", 
+    "assets/pomelo4.jpg", 
+    "assets/pomelo5.jpg", 
+    "assets/pomelo6.jpg"
   ]
 },
-{
-      "id": "1238",
-  "titulo": "manzanass",
+  {
+  "id": "manzana",
+  "titulo": "manzana",
   "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
   "precio": 12,
-  "enlaceCompra": "https://tu-tienda.com/producto/12345",
+  "enlaceCompra": "https://punti-delta.vercel.app/producto.html?id=manzana",
   "imagenes": [
-    "assets/11.jpg",
-    "1.png",
-    "1.png" 
+    "assets/manzana1.jpg",  
+    "assets/manzana2.jpg",  
+    "assets/manzana3.jpg",  
+    "assets/manzana4.jpg",  
+    "assets/manzana5.jpg",  
+    "assets/manzana6.jpg"
   ]
 },
-{
-      "id": "1239",
-  "titulo": "manzanass",
+  {
+  "id": "chicle",
+  "titulo": "chicle",
   "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
   "precio": 12,
-  "enlaceCompra": "https://tu-tienda.com/producto/12345",
+  "enlaceCompra": "https://punti-delta.vercel.app/producto.html?id=chicle",
   "imagenes": [
-    "assets/13.jpg",
-    "1.png",
-    "1.png" 
+    "assets/chicle1.jpg",  
+    "assets/chicle2.jpg",
+    "assets/chicle3.jpg",
+    "assets/chicle4.jpg",
+    "assets/chicle5.jpg",
+    "assets/chicle6.jpg",
+    "assets/chicle7.jpg"
+  ]
+},
+  {
+  "id": "leche",
+  "titulo": "leche",
+  "descripcion": "rojo + hojas lisas + verde \nhola \nholaaa \nholaaa",
+  "precio": 12,
+  "enlaceCompra": "https://punti-delta.vercel.app/producto.html?id=leche",
+  "imagenes": [
+    "assets/leche1.jpg",  
+    "assets/leche2.jpg",
+    "assets/leche3.jpg",  
+    "assets/leche4.jpg", 
+    "assets/leche5.jpg", 
+    "assets/leche6.jpg"
+    
   ]
 }
 ]
