@@ -30,7 +30,7 @@ function cargarProductos(jsonPath, limite) {
         card.innerHTML = `
           <img src="${primeraImagen}" alt="${producto.titulo}">
           <div>${producto.titulo}</div>
-          <a href="/producto?id=${producto.id}" target="_self">ver producto</a>
+          <a href="/producto.html?id=${producto.id}" target="_self">ver producto</a>
         `;
         grid.appendChild(card);
       });

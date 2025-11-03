@@ -17,7 +17,7 @@ async function cargarProductos(jsonPath) {
       card.innerHTML = `
         <img src="${primeraImagen}" alt="${escapeHtml(producto.titulo || 'Producto')}">
         <p>${escapeHtml(producto.titulo || '')}</p>
-        <a href="/producto?id=${producto.id}" target="_self">ver producto</a>
+        <a href="/producto.html?id=${producto.id}" target="_self">ver producto</a>
       `;
       // insertamos antes del elemento static-image para preservar orden visual (texto -> productos -> imagen)
       const staticImage = container.querySelector('.static-image');
